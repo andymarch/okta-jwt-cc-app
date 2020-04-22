@@ -1,0 +1,17 @@
+{
+  "name": "okta-o4o-service-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "register": "node register.js",
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "node-jose": "^1.1.4"
+  }
+}
