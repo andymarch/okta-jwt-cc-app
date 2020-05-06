@@ -13,8 +13,14 @@ APP_LABEL=<your app name>
 API_TOKEN=<your api token>
 `
 
-Run `npm run register` this will create a app.key JSON Web Key Set (JWKS) file
+Run `npm run register` this will create a JSON Web Key Set (JWKS) file named app.key
 in this directory and register the application with Okta.
+
+You can clear your .env file now.
+
+## Manage your scopes
+
+In the Okta admin interface find your newly created app and set the scopes you require your application to be able to request.
 
 ## Getting an access token
 
