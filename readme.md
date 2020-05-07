@@ -31,3 +31,4 @@ TOKEN_ENDPOINT=https://<yourtenant>.okta.com/oauth2/v1/token
 CLIENT_ID=<your client id from registeration>
 SCOPES=<the scopes you require>
 `
+Run `npm run start`, this will call the token endpoint with a jwt signed with the private key from app.key and print the response to the console this should include the access token.
