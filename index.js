@@ -10,13 +10,21 @@ getKeyStore()
 .then((keystore)=>{
     const now = Math.floor( new Date().getTime() / 1000 )
     const plus5Minutes = Math.floor((new Date(now + (5*60))))
+    const tokenId = "MyTokenID"+now
 
     const claims = {
+        //Required: the token endpoint of the authorization server
         aud: process.env.TOKEN_ENDPOINT,
+        //Required: your client id as you are issuing this JWT
         iss: process.env.CLIENT_ID,
+        //Required: your cliend id as you are the subject of the JWT
         sub: process.env.CLIENT_ID,
+        //Required: maximum permitted expiration time is one hour in the future
+        exp: plus5Minutes,
+        //Optional: the time the token was created
         iat: now,
-        exp: plus5Minutes
+        //Optional: token identifier to prevent replay attacks.
+        jti: tokenId
     };
 
     var key = keystore.get("appkey1")
